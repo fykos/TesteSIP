@@ -10,7 +10,11 @@
 
 #import <pjsip-ios/pjsip-ios.h>
 
-@interface ViewController ()
+#define PJ_CONFIG_IPHONE 1
+
+@interface ViewController ()<DXIPJSipManagerDelegate>
+
+@property (strong, nonatomic) DXIPJSipManager *dXIPJSipManager;
 
 @end
 
@@ -24,6 +28,21 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    self.dXIPJSipManager = [DXIPJSipManager getInstance];
+    [self.dXIPJSipManager setDelegate:self];
+    
+    [self.dXIPJSipManager registerToSipServerAndDoAgentLogin];
+}
+
+- (void)onRegisterToSipServerAndLogAgentDidFinish
+{
+    NSLog(@"Status: %@",self.dXIPJSipManager.sipState);
 }
 
 @end

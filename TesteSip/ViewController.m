@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import <pjsip-ios/pjsip-ios.h>
+
 @interface ViewController ()
 
 @end

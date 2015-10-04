@@ -15,6 +15,9 @@
 		08FE4A0C1BC19E0C00EF79FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FE4A0B1BC19E0C00EF79FE /* Images.xcassets */; };
 		08FE4A0F1BC19E0C00EF79FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08FE4A0D1BC19E0C00EF79FE /* LaunchScreen.xib */; };
 		08FE4A1B1BC19E0C00EF79FE /* TesteSipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE4A1A1BC19E0C00EF79FE /* TesteSipTests.m */; };
+		08FE4A2C1BC1A02200EF79FE /* libpjsip-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FE4A291BC19FFA00EF79FE /* libpjsip-ios.a */; };
+		08FE4A2E1BC1A02D00EF79FE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FE4A2D1BC1A02D00EF79FE /* AudioToolbox.framework */; };
+		08FE4A301BC1A03400EF79FE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FE4A2F1BC1A03400EF79FE /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +27,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 08FE49F71BC19E0C00EF79FE;
 			remoteInfo = TesteSip;
+		};
+		08FE4A281BC19FFA00EF79FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FE4A241BC19FFA00EF79FE /* pjsip-ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 22697EB81B034E2A00A15C4E;
+			remoteInfo = "pjsip-ios";
+		};
+		08FE4A2A1BC1A00D00EF79FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FE4A241BC19FFA00EF79FE /* pjsip-ios.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 22697EB71B034E2A00A15C4E;
+			remoteInfo = "pjsip-ios";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -42,6 +59,9 @@
 		08FE4A141BC19E0C00EF79FE /* TesteSipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TesteSipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FE4A191BC19E0C00EF79FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FE4A1A1BC19E0C00EF79FE /* TesteSipTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TesteSipTests.m; sourceTree = "<group>"; };
+		08FE4A241BC19FFA00EF79FE /* pjsip-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pjsip-ios.xcodeproj"; path = "PJSIP-iOS/pjsip-ios.xcodeproj"; sourceTree = "<group>"; };
+		08FE4A2D1BC1A02D00EF79FE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		08FE4A2F1BC1A03400EF79FE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08FE4A301BC1A03400EF79FE /* AVFoundation.framework in Frameworks */,
+				08FE4A2E1BC1A02D00EF79FE /* AudioToolbox.framework in Frameworks */,
+				08FE4A2C1BC1A02200EF79FE /* libpjsip-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +88,9 @@
 		08FE49EF1BC19E0C00EF79FE = {
 			isa = PBXGroup;
 			children = (
+				08FE4A2F1BC1A03400EF79FE /* AVFoundation.framework */,
+				08FE4A2D1BC1A02D00EF79FE /* AudioToolbox.framework */,
+				08FE4A241BC19FFA00EF79FE /* pjsip-ios.xcodeproj */,
 				08FE49FA1BC19E0C00EF79FE /* TesteSip */,
 				08FE4A171BC19E0C00EF79FE /* TesteSipTests */,
 				08FE49F91BC19E0C00EF79FE /* Products */,
@@ -122,6 +148,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		08FE4A251BC19FFA00EF79FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				08FE4A291BC19FFA00EF79FE /* libpjsip-ios.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +170,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				08FE4A2B1BC1A00D00EF79FE /* PBXTargetDependency */,
 			);
 			name = TesteSip;
 			productName = TesteSip;
@@ -171,6 +206,11 @@
 				TargetAttributes = {
 					08FE49F71BC19E0C00EF79FE = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					08FE4A131BC19E0C00EF79FE = {
 						CreatedOnToolsVersion = 6.4;
@@ -189,6 +229,12 @@
 			mainGroup = 08FE49EF1BC19E0C00EF79FE;
 			productRefGroup = 08FE49F91BC19E0C00EF79FE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 08FE4A251BC19FFA00EF79FE /* Products */;
+					ProjectRef = 08FE4A241BC19FFA00EF79FE /* pjsip-ios.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				08FE49F71BC19E0C00EF79FE /* TesteSip */,
@@ -196,6 +242,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		08FE4A291BC19FFA00EF79FE /* libpjsip-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpjsip-ios.a";
+			remoteRef = 08FE4A281BC19FFA00EF79FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		08FE49F61BC19E0C00EF79FE /* Resources */ = {
@@ -244,6 +300,11 @@
 			isa = PBXTargetDependency;
 			target = 08FE49F71BC19E0C00EF79FE /* TesteSip */;
 			targetProxy = 08FE4A151BC19E0C00EF79FE /* PBXContainerItemProxy */;
+		};
+		08FE4A2B1BC1A00D00EF79FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "pjsip-ios";
+			targetProxy = 08FE4A2A1BC1A00D00EF79FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -422,6 +483,7 @@
 				08FE4A201BC19E0C00EF79FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08FE4A211BC19E0C00EF79FE /* Build configuration list for PBXNativeTarget "TesteSipTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +492,7 @@
 				08FE4A231BC19E0C00EF79FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
